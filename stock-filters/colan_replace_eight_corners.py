@@ -10,18 +10,18 @@ inputs = (
 )
 
 
-def draw_box(level, x, y, z, material):
+def draw_block(level, x, y, z, material):
 	level.setBlockAt(x, y, z, material.ID)
 	level.setBlockDataAt(x, y, z, 0)
 
 def perform(level, box, options):
 	material = options["Material"]
 
-	draw_box(level, box.origin.x, box.origin.y, box.origin.z, material)
-	draw_box(level, box.origin.x + box.size.x, box.origin.y, box.origin.z, material)
-	draw_box(level, box.origin.x, box.origin.y + box.size.y, box.origin.z, material)
-	draw_box(level, box.origin.x, box.origin.y, box.origin.z + box.size.z, material)
-	draw_box(level, box.origin.x + box.size.x, box.origin.y + box.size.y, box.origin.z, material)
-	draw_box(level, box.origin.x + box.size.x, box.origin.y, box.origin.z + box.size.z, material)
-	draw_box(level, box.origin.x, box.origin.y + box.size.y, box.origin.z + box.size.z, material)
-	draw_box(level, box.origin.x + box.size.x, box.origin.y + box.size.y, box.origin.z + box.size.z, material)
+	draw_block(level, box.origin.x, box.origin.y, box.origin.z, material)
+	draw_block(level, box.origin.x + box.size.x, box.origin.y, box.origin.z, material)
+	draw_block(level, box.origin.x, box.origin.y + box.size.y, box.origin.z, material)
+	draw_block(level, box.origin.x, box.origin.y, box.origin.z + box.size.z, material)
+	draw_block(level, box.origin.x + box.size.x, box.origin.y + box.size.y, box.origin.z, material)
+	draw_block(level, box.origin.x + box.size.x, box.origin.y, box.origin.z + box.size.z, material)
+	draw_block(level, box.origin.x, box.origin.y + box.size.y, box.origin.z + box.size.z, material)
+	draw_block(level, box.origin.x + box.size.x, box.origin.y + box.size.y, box.origin.z + box.size.z, material)
