@@ -1,7 +1,5 @@
 from pymclevel import alphaMaterials, MCSchematic, MCLevel, BoundingBox
 from mcplatform import *
-from pprint import pprint
-
 
 inputs = (
 	("Replace All Except Air", "label"),
