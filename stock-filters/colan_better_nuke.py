@@ -24,8 +24,7 @@ def nuke(level, origin, size):
 					draw_block(level, x, y, z, alphaMaterials.CoalBlock)
 				elif block == alphaMaterials.Leaves.ID:
 					draw_block(level, x, y, z, alphaMaterials.Air)
-				elif top_layer_found == False and \
-				   block != alphaMaterials.Air.ID and \
+				elif block != alphaMaterials.Air.ID and \
 				   block != alphaMaterials.CoalBlock.ID and \
 				   block != alphaMaterials.Lava.ID:
 					draw_block(level, x, y, z, alphaMaterials.Obsidian)
